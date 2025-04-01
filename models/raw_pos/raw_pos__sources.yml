@@ -1,0 +1,169 @@
+version: 2
+sources:
+- name: frostbyte_tasty_bytes_setup_s
+  description: ''
+  database: tb_101
+  schema: RAW_POS
+  tables:
+  - name: COUNTRY
+    description: ''
+    columns:
+    - name: COUNTRY_ID
+      description: ''
+    - name: COUNTRY
+      description: ''
+    - name: ISO_CURRENCY
+      description: ''
+    - name: ISO_COUNTRY
+      description: ''
+    - name: CITY_ID
+      description: ''
+    - name: CITY
+      description: ''
+    - name: CITY_POPULATION
+      description: ''
+  - name: FRANCHISE
+    description: ''
+    columns:
+    - name: FRANCHISE_ID
+      description: ''
+    - name: FIRST_NAME
+      description: ''
+    - name: LAST_NAME
+      description: ''
+    - name: CITY
+      description: ''
+    - name: COUNTRY
+      description: ''
+    - name: E_MAIL
+      description: ''
+    - name: PHONE_NUMBER
+      description: ''
+  - name: LOCATION
+    description: ''
+    columns:
+    - name: LOCATION_ID
+      description: ''
+    - name: PLACEKEY
+      description: ''
+    - name: LOCATION
+      description: ''
+    - name: CITY
+      description: ''
+    - name: REGION
+      description: ''
+    - name: ISO_COUNTRY_CODE
+      description: ''
+    - name: COUNTRY
+      description: ''
+  - name: MENU
+    description: ''
+    columns:
+    - name: MENU_ID
+      description: ''
+    - name: MENU_TYPE_ID
+      description: ''
+    - name: MENU_TYPE
+      description: ''
+    - name: TRUCK_BRAND_NAME
+      description: ''
+    - name: MENU_ITEM_ID
+      description: ''
+    - name: MENU_ITEM_NAME
+      description: ''
+    - name: ITEM_CATEGORY
+      description: ''
+    - name: COST_OF_GOODS_USD
+      description: ''
+    - name: SALE_PRICE_USD
+      description: ''
+    - name: MENU_ITEM_HEALTH_METRICS_OBJ
+      description: ''
+  - name: ORDER_DETAIL
+    description: ''
+    columns:
+    - name: ORDER_DETAIL_ID
+      description: ''
+    - name: ORDER_ID
+      description: ''
+    - name: MENU_ITEM_ID
+      description: ''
+    - name: DISCOUNT_ID
+      description: ''
+    - name: LINE_NUMBER
+      description: ''
+    - name: QUANTITY
+      description: ''
+    - name: UNIT_PRICE
+      description: ''
+    - name: PRICE
+      description: ''
+    - name: ORDER_ITEM_DISCOUNT_AMOUNT
+      description: ''
+    - name: ORDER_HEADER
+    description: ''
+    columns:
+    - name: ORDER_ID
+      description: ''
+    - name: TRUCK_ID
+      description: ''
+    - name: LOCATION_ID
+      description: ''
+    - name: CUSTOMER_ID
+      description: ''
+    - name: DISCOUNT_ID
+      description: ''
+    - name: SHIFT_ID
+      description: ''
+    - name: SHIFT_START_TIME
+      description: ''
+    - name: SHIFT_END_TIME
+      description: ''
+    - name: ORDER_CHANNEL
+      description: ''
+    - name: ORDER_TS
+      description: ''
+    - name: SERVED_TS
+      description: ''
+    - name: ORDER_CURRENCY
+      description: ''
+    - name: ORDER_AMOUNT
+      description: ''
+    - name: ORDER_TAX_AMOUNT
+      description: ''
+    - name: ORDER_DISCOUNT_AMOUNT
+      description: ''
+    - name: ORDER_TOTAL
+      description: ''
+  - name: TRUCK
+    description: ''
+    columns:
+    - name: TRUCK_ID
+      description: ''
+    - name: MENU_TYPE_ID
+      description: ''
+    - name: PRIMARY_CITY
+      description: ''
+    - name: REGION
+      description: ''
+    - name: ISO_REGION
+      description: ''
+    - name: COUNTRY
+      description: ''
+    - name: ISO_COUNTRY_CODE
+      description: ''
+    - name: FRANCHISE_FLAG
+      description: ''
+    - name: YEAR
+      description: ''
+    - name: MAKE
+      description: ''
+    - name: MODEL
+      description: ''
+    - name: EV_FLAG
+      description: ''
+    - name: FRANCHISE_ID
+      description: ''
+    - name: TRUCK_OPENING_DATE
+      description: ''
+

@@ -1,0 +1,17 @@
+tasty_bytes:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: SFENGINEERING-DEXQA6
+      user: gtmteam
+      role: accountadmin
+      database: charlie_test
+      warehouse: charlie_test
+    prod:
+      type: snowflake
+      account: SFENGINEERING-DEXQA6
+      user: gtmteam
+      role: accountadmin
+      database: charlie_test
+      warehouse: charlie_test
