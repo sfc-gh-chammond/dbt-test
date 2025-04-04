@@ -1,4 +1,4 @@
 {{ config(alias='ORDER_HEADER') }}
 
 SELECT *
-FROM {{ source('frostbyte_tasty_bytes_setup_s', 'ORDER_HEADER') }}
+FROM {{ source('tb_101', 'ORDER_HEADER') }}

@@ -1,6 +1,6 @@
 version: 2
 sources:
-- name: frostbyte_tasty_bytes_setup_s
+- name: tb_101
   description: ''
   database: tb_101
   schema: RAW_POS
@@ -100,7 +100,7 @@ sources:
       description: ''
     - name: ORDER_ITEM_DISCOUNT_AMOUNT
       description: ''
-    - name: ORDER_HEADER
+  - name: ORDER_HEADER
     description: ''
     columns:
     - name: ORDER_ID

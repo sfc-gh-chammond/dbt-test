@@ -1,4 +1,4 @@
 {{ config(alias='CUSTOMER_LOYALTY') }}
 
 select *
-from {{ source('frostbyte_tasty_bytes_setup_s', 'CUSTOMER_LOYALTY') }}
+from {{ source('tb_101', 'CUSTOMER_LOYALTY') }}

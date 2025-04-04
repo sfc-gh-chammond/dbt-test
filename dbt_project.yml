@@ -25,9 +25,6 @@ models:
     raw_customer:
       materialized: table
       +schema: raw_customer
-    raw_safegraph:
-      materialized: table
-      +schema: raw_safegraph
     harmonized:
       materialized: view
       +schema: harmonized

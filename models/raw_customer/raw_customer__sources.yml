@@ -1,6 +1,6 @@
 version: 2
 sources:
-- name: frostbyte_tasty_bytes_setup_s
+- name: tb_101
   description: ''
   database: tb_101
   schema: RAW_CUSTOMER
