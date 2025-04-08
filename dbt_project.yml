@@ -1,5 +1,5 @@
 ## Project
-name: TASTY_BYTES_ZERO_TO_SNOWFLAKE
+name: tasty_bytes
 version: "1.0"
 config-version: 2
 profile: tasty_bytes
@@ -18,16 +18,8 @@ clean-targets: [target, dbt_modules]
 
 ## Models
 models:
-  TASTY_BYTES_ZERO_TO_SNOWFLAKE:
-    raw_pos:
-      materialized: table
-      +schema: raw_pos
-    raw_customer:
-      materialized: table
-      +schema: raw_customer
-    harmonized:
-      materialized: view
-      +schema: harmonized
-    analytics:
-      materialized: view
-      +schema: analytics
+  tasty_bytes:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

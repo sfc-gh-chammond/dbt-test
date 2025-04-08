@@ -1,6 +1,6 @@
 version: 2
 sources:
-- name: tb_101
+- name: tb_101_pos
   description: 'Point of Sale source data'
   database: tb_101
   schema: RAW_POS
@@ -278,4 +278,41 @@ sources:
       description: 'Date truck began operations'
       tests:
         - not_null
-
+- name: tb_101_customer
+  description: ''
+  database: tb_101
+  schema: RAW_CUSTOMER
+  tables:
+  - name: CUSTOMER_LOYALTY
+    description: ''
+    columns:
+    - name: CUSTOMER_ID
+      description: ''
+    - name: FIRST_NAME
+      description: ''
+    - name: LAST_NAME
+      description: ''
+    - name: CITY
+      description: ''
+    - name: COUNTRY
+      description: ''
+    - name: POSTAL_CODE
+      description: ''
+    - name: PREFERRED_LANGUAGE
+      description: ''
+    - name: GENDER
+      description: ''
+    - name: FAVOURITE_BRAND
+      description: ''
+    - name: MARITAL_STATUS
+      description: ''
+    - name: CHILDREN_COUNT
+      description: ''
+    - name: SIGN_UP_DATE
+      description: ''
+    - name: BIRTHDAY_DATE
+      description: ''
+    - name: E_MAIL
+      description: ''
+    - name: PHONE_NUMBER
+      description: ''
