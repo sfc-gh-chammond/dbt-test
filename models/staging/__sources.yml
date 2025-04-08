@@ -33,7 +33,7 @@ sources:
     - name: CITY_POPULATION
       description: 'City population count'
       tests:
-        - test_is_positive_amount
+        - is_positive_amount
   - name: FRANCHISE
     description: 'Franchise ownership data'
     columns:
@@ -119,11 +119,11 @@ sources:
     - name: COST_OF_GOODS_USD
       description: 'Cost to prepare item'
       tests:
-        - test_is_positive_amount
+        - is_positive_amount
     - name: SALE_PRICE_USD
       description: 'Retail price of item'
       tests:
-        - test_is_positive_amount
+        - is_positive_amount
     - name: MENU_ITEM_HEALTH_METRICS_OBJ
       description: 'Health metrics for menu item'
   - name: ORDER_DETAIL
@@ -139,7 +139,7 @@ sources:
       tests:
         - not_null
         - relationships:
-            to: source('tb_101', 'ORDER_HEADER')
+            to: source('tb_101_pos', 'ORDER_HEADER')
             field: ORDER_ID
     - name: MENU_ITEM_ID
       description: 'Foreign key to menu'
@@ -155,15 +155,15 @@ sources:
       description: 'Quantity ordered'
       tests:
         - not_null
-        - test_is_positive_amount
+        - is_positive_amount
     - name: UNIT_PRICE
       description: 'Price per unit'
       tests:
-        - test_is_positive_amount
+        - is_positive_amount
     - name: PRICE
       description: 'Total line price'
       tests:
-        - test_is_positive_amount
+        - is_positive_amount
     - name: ORDER_ITEM_DISCOUNT_AMOUNT
       description: 'Discount amount for line'
   - name: ORDER_HEADER
@@ -183,14 +183,14 @@ sources:
       tests:
         - not_null
         - relationships:
-            to: source('tb_101', 'TRUCK')
+            to: source('tb_101_pos', 'TRUCK')
             field: TRUCK_ID
     - name: LOCATION_ID
       description: 'Foreign key to location'
       tests:
         - not_null
         - relationships:
-            to: source('tb_101', 'LOCATION')
+            to: source('tb_101_pos', 'LOCATION')
             field: LOCATION_ID
     - name: CUSTOMER_ID
       description: 'Customer identifier'
@@ -218,7 +218,7 @@ sources:
       description: 'Pre-tax order amount'
       tests:
         - not_null
-        - test_is_positive_amount
+        - is_positive_amount
     - name: ORDER_TAX_AMOUNT
       description: 'Tax amount'
       tests:
@@ -229,7 +229,7 @@ sources:
       description: 'Total order amount'
       tests:
         - not_null
-        - test_is_positive_amount
+        - is_positive_amount
   - name: TRUCK
     description: 'Food truck data'
     columns:
@@ -272,7 +272,7 @@ sources:
       description: 'Foreign key to franchise'
       tests:
         - relationships:
-            to: source('tb_101', 'FRANCHISE')
+            to: source('tb_101_pos', 'FRANCHISE')
             field: FRANCHISE_ID
     - name: TRUCK_OPENING_DATE
       description: 'Date truck began operations'

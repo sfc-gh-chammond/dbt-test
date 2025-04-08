@@ -1,5 +1,3 @@
-{{ config(alias='CUSTOMER_LOYALTY_METRICS_V') }}
-
 SELECT 
     cl.customer_id,
     cl.city,
