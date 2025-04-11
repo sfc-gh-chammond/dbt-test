@@ -16,10 +16,15 @@ sources:
       data_tests:
         - unique
         - not_null
+        - dbt_utils.accepted_range:  # Numeric range validation
+            min_value: 1
+            max_value: 1000
     - name: COUNTRY
       description: 'Country name'
       data_tests:
         - not_null
+        - dbt_utils.string_matches_regex:  # Validate country name format
+            regex: '^[A-Za-z ]+$'
     - name: ISO_CURRENCY
       description: 'ISO currency code'
     - name: ISO_COUNTRY
@@ -208,6 +213,8 @@ sources:
       description: 'Order timestamp'
       data_tests:
         - not_null
+        - dbt_utils.expression_is_true:  # Verify timestamp is not in the future
+            expression: "{{ column_name }} <= current_timestamp()"
     - name: SERVED_TS
       description: 'Time order was served'
     - name: ORDER_CURRENCY
@@ -219,6 +226,10 @@ sources:
       data_tests:
         - not_null
         - is_positive_amount
+        - dbt_utils.accepted_range:  # Realistic order amount range
+            min_value: 0
+            max_value: 10000
+            inclusive: true
     - name: ORDER_TAX_AMOUNT
       description: 'Tax amount'
       data_tests:
@@ -230,6 +241,10 @@ sources:
       data_tests:
         - not_null
         - is_positive_amount
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: source('tb_101_pos', 'ORDER_DETAIL')
+          group_by_columns: ['ORDER_ID']
   - name: TRUCK
     description: 'Food truck data'
     columns:
@@ -262,6 +277,10 @@ sources:
       description: 'Year of truck manufacture'
       data_tests:
         - not_null
+        - dbt_utils.accepted_range:  # Reasonable year range
+            min_value: 1990
+            max_value: "{{ dbt_utils.current_timestamp_in_utc().year }}"
+            inclusive: true
     - name: MAKE
       description: 'Truck manufacturer'
     - name: MODEL
